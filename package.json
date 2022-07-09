@@ -1,0 +1,42 @@
+{
+  "name": "react-i18n",
+  "version": "0.1.0",
+  "description": "A library of React hooks and components for localizing your web app.",
+  "type": "commonjs",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "sideEffects": false,
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "scripts": {
+    "postinstall": "mkdir -p ./dist",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./dist/* && rm -f ./react-i18n-*.tgz"
+  },
+  "author": "Michael Zalla <michael@zalla.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelZalla/react-i18n"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-router": "^6.3.0",
+    "typescript": "^4.7.4"
+  },
+  "keywords": [
+    "react",
+    "i18n",
+    "internationalization",
+    "locale",
+    "localization",
+    "language",
+    "typescript"
+  ]
+}
