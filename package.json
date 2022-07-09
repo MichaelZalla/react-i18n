@@ -1,5 +1,5 @@
 {
-  "name": "react-i18n",
+  "name": "@michaelzalla/react-i18n",
   "version": "0.1.0",
   "description": "A library of React hooks and components for localizing your web app.",
   "type": "commonjs",
@@ -19,7 +19,7 @@
   "author": "Michael Zalla <michael@zalla.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MichaelZalla/react-i18n"
+    "url": "git+https://github.com/MichaelZalla/react-i18n.git"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -38,5 +38,9 @@
     "localization",
     "language",
     "typescript"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/MichaelZalla/react-i18n/issues"
+  },
+  "homepage": "https://github.com/MichaelZalla/react-i18n#readme"
 }
