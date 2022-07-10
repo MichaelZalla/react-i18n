@@ -2,7 +2,7 @@ import React from 'react';
 
 import pupa from 'pupa';
 
-import { useI18nSettings, I18nSettingsContext, I18n } from '@michaelzalla/react-i18n'
+import { useI18nSettings, I18nSettingsContext, I18n, I18nLanguageSelect } from '@michaelzalla/react-i18n'
 
 import './App.css';
 
@@ -39,13 +39,26 @@ function App() {
       setSettings,
     ]}>
 
-    <div className="App">
-      <h1>
-        <I18n k='components.App.greeting' data={{ username }}>
-          {/* Hello, {username}! */}
-        </I18n>
-      </h1>
-    </div>
+      <div className="App">
+
+        <main>
+
+          <h1>
+            <I18n k='components.App.greeting' data={{ username }}>
+              {/* Hello, {username}! */}
+            </I18n>
+          </h1>
+
+        </main>
+
+        <aside>
+          <I18nLanguageSelect labels={{
+            en: 'English',
+            fr: 'Français',
+          }} />
+        </aside>
+
+      </div>
 
     </I18nSettingsContext.Provider>
   )
