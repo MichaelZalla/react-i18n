@@ -1,5 +1,7 @@
 import React from 'react';
 
+import pupa from 'pupa';
+
 import { useI18nSettings } from '@michaelzalla/react-i18n'
 
 import './App.css';
@@ -24,6 +26,7 @@ function App() {
         'en',
         'fr',
       ],
+      interpolate: pupa,
     })
 
   }, [setSettings])
