@@ -2,7 +2,7 @@ import React from 'react';
 
 import pupa from 'pupa';
 
-import { useI18nSettings } from '@michaelzalla/react-i18n'
+import { useI18nSettings, I18nSettingsContext } from '@michaelzalla/react-i18n'
 
 import './App.css';
 
@@ -32,10 +32,19 @@ function App() {
   }, [setSettings])
 
   return (
+    <I18nSettingsContext.Provider value={[
+      currentLanguage,
+      setCurrentLanguage,
+      settings,
+      setSettings,
+    ]}>
+
     <div className="App">
       {/* @TODO Localize me! */}
       <h1>Hello, {username}!</h1>
     </div>
+
+    </I18nSettingsContext.Provider>
   )
 
 }
