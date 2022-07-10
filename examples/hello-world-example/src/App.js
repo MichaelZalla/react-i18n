@@ -1,10 +1,32 @@
 import React from 'react';
 
+import { useI18nSettings } from '@michaelzalla/react-i18n'
+
 import './App.css';
 
 function App() {
 
   const [username] = React.useState('Cassidy')
+
+  const [
+    currentLanguage,
+    setCurrentLanguage,
+    settings,
+    setSettings,
+  ] = useI18nSettings()
+
+  React.useEffect(() => {
+
+    // We'll support English and French
+
+    setSettings({
+      supportedLanguages: [
+        'en',
+        'fr',
+      ],
+    })
+
+  }, [setSettings])
 
   return (
     <div className="App">
