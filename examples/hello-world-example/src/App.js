@@ -2,7 +2,7 @@ import React from 'react';
 
 import pupa from 'pupa';
 
-import { useI18nSettings, I18nSettingsContext } from '@michaelzalla/react-i18n'
+import { useI18nSettings, I18nSettingsContext, I18n } from '@michaelzalla/react-i18n'
 
 import './App.css';
 
@@ -40,8 +40,11 @@ function App() {
     ]}>
 
     <div className="App">
-      {/* @TODO Localize me! */}
-      <h1>Hello, {username}!</h1>
+      <h1>
+        <I18n k='components.App.greeting' data={{ username }}>
+          {/* Hello, {username}! */}
+        </I18n>
+      </h1>
     </div>
 
     </I18nSettingsContext.Provider>
